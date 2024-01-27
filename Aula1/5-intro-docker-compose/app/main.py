@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import os
 
-USERNAME = os.environ.get('USERNAME')
+TESTE = os.environ.get('TESTE')
 
 app = FastAPI()
 
@@ -11,4 +11,4 @@ async def root():
 
 @app.get("/variavel_ambiente")
 async def verificar_variavel_de_ambiente():
-    return {"USERNAME": USERNAME}
+    return {"TESTE": TESTE}
